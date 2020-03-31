@@ -123,7 +123,7 @@ section {
   background-image: url("../images/bg-pattern-how-we-work-desktop.svg");
   background-repeat: no-repeat;
   background-position: top right;
-  position: relative;
+  position: absolute;
   top: 0;
   right: 0;
   width: 100%;
