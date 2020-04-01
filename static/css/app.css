@@ -38,7 +38,7 @@ h3 {
 }
 
 .btn {
-  padding: 10px 15px;
+  padding: 10px;
   border: 2px solid #fff;
   background-color: transparent;
   color: #fff;
@@ -49,6 +49,12 @@ h3 {
   color: var(--dark-violet);
   border: 1px solid var(--dark-violet);
   padding: 10px;
+}
+
+.btn:hover,
+btn:active {
+  color: var(--gray-blue);
+  border: 1px solid var(--gray-blue);
 }
 
 /* nav styling */
@@ -79,6 +85,9 @@ header {
   position: relative;
   margin-bottom: 250px;
 }
+header * {
+  z-index: 1; /* Poder seleccionar texto o clicar en el boton */
+}
 
 header::after {
   content: "";
@@ -102,6 +111,7 @@ header::before {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 0;
 }
 
 .image-header {
@@ -116,6 +126,7 @@ section {
   background-color: var(--dark-violet);
   color: #fff;
   position: relative;
+  margin: 100px auto 100px auto; /* top right bottom left */
 }
 
 .bg-violet::after {
@@ -140,4 +151,47 @@ section p {
 
 /* footer styling */
 footer {
+  color: var(--dark-grayish-violet);
+  position: relative;
+}
+
+footer::before {
+  content: "";
+  background-image: url("../images/bg-pattern-footer-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+footer h4 {
+  color: var(--dark-grayish-violet);
+  text-transform: uppercase;
+}
+
+footer ul {
+  padding: 0px;
+  list-style-type: none;
+}
+
+footer li {
+  margin-bottom: 12px;
+  margin-left: 15px;
+}
+
+footer li a {
+  color: var(--dark-violet);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+align-start {
+  align-items: flex-start;
+}
+
+.border-bottom {
+  border-bottom: 1px solid var(--dark-grayish-violet);
 }
